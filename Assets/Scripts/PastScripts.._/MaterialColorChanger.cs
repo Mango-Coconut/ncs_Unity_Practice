@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class MaterialColorChanger : MonoBehaviour
 {
-    // Start is called before the first frame update
+    MeshRenderer rdr;
+
     void Start()
     {
-        
+        rdr = GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            rdr.material.color = Color.red;
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
-            GetComponent<Renderer>().material.color = Color.green;
+            rdr.material.color = Color.green;
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            GetComponent<Renderer>().material.color = Color.blue;
+            rdr.material.color = Color.blue;
         }
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            GetComponent<Renderer>().material.color = Color.yellow;
+            rdr.material.color = Color.yellow;
         }
     }
 }
